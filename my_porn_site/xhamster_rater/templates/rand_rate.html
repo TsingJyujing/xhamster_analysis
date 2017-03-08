@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Random Rater</title>
+</head>
+<body>
+<h2>{{title}}</h2>
+<h4>Video Time: &nbsp {{video_time}}</h4>
+<div>
+    <a href="./?id={{id}}&rate=2">非常喜欢</a>&nbsp
+    <a href="./?id={{id}}&rate=1">还可以</a>&nbsp
+    <a href="./?id={{id}}&rate=0">一般般</a>&nbsp
+    <a href="./?id={{id}}&rate=-1">有点粗糙</a>&nbsp
+    <a href="./?id={{id}}&rate=-2">不想看</a>&nbsp
+    <a href="./">不置可否</a>
+</div><br><br>
+<div>
+    {% for imgurl in img_urls %}
+        <img src="{{imgurl}}"/>
+    {% endfor %}
+</div><br>
+<div>
+    {% for cat in categories %}
+        {{cat}} &nbsp
+    {% endfor %}
+</div><br>
+<a href="https://m.xhamster.com/movies/{{id}}">转到原网站</a>&nbsp
+
+</body>
+</html>
